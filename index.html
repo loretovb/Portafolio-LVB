@@ -7,31 +7,73 @@
     <title>Portafolio UX</title>
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- asdad -->
-<body>
-    <header>
-        <img src="./assets/img/Logo.png" alt="logo lvb">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#Inicio"></a>
-                    <a href="#Sobre mi"></a>
-                    <a href="#Habilidades"></a>
-                    <a href="#Proyectos"></a>
-                    <a href="#Contacto"></a>
-                </li>
-            </ul>
-        </nav>
 
-    </header>
-    <div id="inicio">
-        <h1>Loreto Valenzuela</h1>
-        <h4>Diseñadora UX/UI con pasión por crear experiencias digitales memorables y centradas en el usuario.</h4>
-        <a href="#Contacto"></a>
-    </div>
+<body>
+
     <main>
-        <section id="Sobre mi">
+        <section class="inicio" id="inicio">
+            <h1>Loreto Valenzuela</h1> <h5>Diseñadora Industrial & UX/UI</h5> <a href="#contacto" class="btn btn-custom">Hablemos</a> </section>
+
+        <section class="sobre-mi-container" id="sobre-mi">
+            <h2 class="titulo-seccion">Sobre mí</h2> <h6>
+                Soy Diseñadora Industrial & UX/UI. Mi enfoque combina el rigor técnico del modelado 3D y la iluminación
+                con una perspectiva empática centrada en el usuario. Me apasiona dar vida a las interfaces a través de
+                detalles dinámicos y prototipos interactivos, transformando necesidades complejas en soluciones
+                tangibles que se sienten fluidas e intuitivas. Mi experiencia previa en proyectos de señalética
+                complementa mi visión sistémica para diseñar experiencias integrales.
+            </h6> </section>
+
+        <section class="habilidades-container" id="habilidades">
+            <h2 class="titulo-seccion">Habilidades</h2> <div class="habilidades-flex">
+                <article class="card-habilidad">
+                    <div class="icon-container"><i class="bi bi-window-sidebar"></i></div>
+                    <h5>Diseño UX/UI</h5> <ul>
+                        <li>Investigación de usuarios</li> <li>Arquitectura de la información</li>
+                        <li>Wireframes y flujos</li>
+                        <li>Diseño de interfaces</li>
+                        <li>Prototipos interactivos</li>
+                    </ul>
+                </article>
+
+                <article class="card-habilidad">
+                    <div class="icon-container"><i class="bi bi-lightbulb"></i></div>
+                    <h5>Diseño Industrial e iluminación</h5>
+                    <ul>
+                        <li>Desarrollo de productos</li>
+                        <li>Modelado 3D (Rhinoceros)</li>
+                        <li>Planimetría y documentación</li>
+                        <li>Cálculo lumínico (Dialux)</li>
+                    </ul>
+                </article>
+
+                <article class="card-habilidad">
+                    <div class="icon-container"><i class="bi bi-signpost-split"></i></div>
+                    <h5>Wayfinding</h5>
+                    <ul>
+                        <li>Análisis de flujos y movilidad</li>
+                        <li>Conceptualización</li>
+                        <li>Emplazamiento en planos</li>
+                        <li>Fotomontajes y visualización</li>
+                        <li>Pre-prensa</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+        <!-- <section id="Sobre mi">
             <h2>Sobre mi</h2>
             <h5>
                 Soy diseñadora UX/UI especializada en crear soluciones digitales que combinan estética y funcionalidad.
@@ -39,7 +81,7 @@
                 y atractivas. Con experiencia en investigación de usuarios, prototipado y diseño de interfaces, trabajo
                 de cerca con equipos multidisciplinarios para llevar ideas desde el concepto hasta la implementación.
             </h5>
-        </section>
+        </section> -->
         <section>
             <div>
                 <h2>Habilidades</h2>
@@ -76,25 +118,25 @@
 
             </div>
         </section>
-        
+
 
         <section id="#Proyectos">
             <h2>Proyectos destacados</h2>
             <div>
-                    <div>
-                        <h3>Iluminacion</h3>
-                        <img src="./assets/img/img ux.png" alt="">
-                        <p>Proyecto </p>
-                    </div>
-                        <img src="./assets/img/img ux.png" alt="">
-                        <h3>Iluminacion</h3>
-                        <div>
-                        
-                    </div>
-                        <img src="./assets/img/img ux.png" alt="">
-                  
-                    </div>
+                <div>
+                    <h3>Iluminacion</h3>
+                    <img src="./assets/img/img ux.png" alt="">
+                    <p>Proyecto </p>
                 </div>
+                <img src="./assets/img/img ux.png" alt="">
+                <h3>Iluminacion</h3>
+                <div>
+
+                </div>
+                <img src="./assets/img/img ux.png" alt="">
+
+            </div>
+            </div>
 
         </section>
 

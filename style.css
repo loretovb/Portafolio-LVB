@@ -1,0 +1,131 @@
+/* --- CONFIGURACIÓN GLOBAL --- */
+body {
+    background-color: #161316;
+    color: #F6F5F4;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* --- ESCALA TIPOGRÁFICA FIGMA --- */
+h1 { font-size: 70px; line-height: 1.2; font-weight: 700; } 
+h2 { font-size: 48px; line-height: 1.2; font-weight: 700; } 
+h5 { font-size: 25px; line-height: 1.2; font-weight: 500; } 
+h6 { font-size: 20px; line-height: 1.2; font-weight: 400; }
+
+/* Texto base para listas y botones */
+li, .btn-custom { 
+    font-size: 16px; 
+    line-height: 1.6; /* 160% legibilidad */
+    font-family: 'Roboto', sans-serif; 
+}
+
+/* --- HERO INICIAL --- */
+.inicio {
+    background-image: url("./assets/img/fondo.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.inicio h1 { margin-bottom: 10px; }
+
+/* Botón Hablemos */
+.btn-custom {
+    background-color: #51B4CD;
+    color: #FFFFFF !important;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 24px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-custom:hover { background-color: #3e8da1; }
+
+/* --- SECCIÓN SOBRE MÍ --- */
+.sobre-mi-container {
+    background-color: #0B090B; /* Fondo diferenciado */
+    padding: 120px 10%;
+}
+
+.titulo-seccion {
+    margin-bottom: 40px;
+}
+
+.sobre-mi-container h6 {
+    max-width: 900px; /* Evita líneas demasiado largas */
+}
+
+/* --- SECCIÓN HABILIDADES --- */
+.habilidades-container {
+    padding: 120px 10%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.habilidades-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+/* CARDS CON TAMAÑO DINÁMICO (Opción Flex inicial) */
+.card-habilidad {
+    flex: 1 1 calc(33.333% - 24px); /* 3 columnas en Desktop */
+    min-width: 320px; /* No se achican como chicle */
+    border: 1px solid #51B4CD;
+    border-radius: 16px;
+    padding: 40px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-container {
+    width: 48px; height: 48px;
+    background-color: rgba(81, 180, 205, 0.1);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px; color: #51B4CD; font-size: 24px;
+}
+
+.card-habilidad h5 { 
+    margin-bottom: 20px; 
+    color: #F6F5F4;
+}
+
+.card-habilidad ul { list-style: none; padding: 0; margin: 0; }
+
+.card-habilidad li { 
+    margin-bottom: 12px; 
+    padding-left: 20px; 
+    position: relative; 
+}
+
+.card-habilidad li::before { 
+    content: "•"; color: #51B4CD; position: absolute; left: 0; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 834px) {
+    .card-habilidad { flex: 1 1 calc(50% - 24px); } /* 2 columnas en Tablet */
+    h1 { font-size: 56px; }
+    h2 { font-size: 38px; }
+}
+
+@media (max-width: 420px) {
+    .card-habilidad { flex: 1 1 100%; } /* 1 columna en Celular */
+    .habilidades-container, .sobre-mi-container { padding: 80px 20px; }
+    h1 { font-size: 48px; }
+}
