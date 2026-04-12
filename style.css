@@ -1,102 +1,101 @@
-/* --- 1. CONFIGURACIÓN GLOBAL --- */
+/* --- 1. BASE --- */
 body {
-    background-color: #161316; /* Gris muy oscuro base */
+    background-color: #161316;
     color: #F6F5F4;
-    font-family: 'Outfit', sans-serif; /* Tu fuente principal */
+    font-family: 'Outfit', sans-serif;
     margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
-/* --- 2. ESCALA TIPOGRÁFICA FIGMA (Outfit) --- */
-h1 { font-size: 70px; line-height: 1.2; font-weight: 700; } /* Nombre */
-h2 { font-size: 48px; line-height: 1.2; font-weight: 700; } /* Título de sección */
-h5 { font-size: 25px; line-height: 1.2; font-weight: 500; } /* Subtítulo hero */
-h6 { font-size: 20px; line-height: 1.2; font-weight: 400; } /* Texto sobre mí */
-li, .btn-custom { font-size: 16px; line-height: 1.6; } /* Body */
+/* --- 2. TIPOGRAFÍA COMPLETA --- */
+h1 { font-size: 70px; line-height: 1.2; font-weight: 700; }
+h2 { font-size: 48px; line-height: 1.2; font-weight: 700; }
+h3 { font-size: 38px; line-height: 1.2; font-weight: 700; }
+h4 { font-size: 31px; line-height: 1.2; font-weight: 600; }
+h5 { font-size: 25px; line-height: 1.2; font-weight: 500; }
+h6 { font-size: 20px; line-height: 1.2; font-weight: 400; }
+p, li { font-size: 16px; line-height: 1.6; margin: 0; }
 
-/* --- 3. SECCIÓN INICIO (Hero) - TOTALMENTE CENTRADA --- */
-.inicio {
-    /* Fondo con imagen que cubre todo */
-    background-image: url("./assets/img/fondo.png"); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    min-height: 100vh; /* Ocupa toda la pantalla */
-
-    /* Centrado Flexbox (el "Auto-Layout" de CSS) */
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* Centra el bloque entero horizontalmente */
-    justify-content: center;   /* Centra el bloque entero verticalmente */
-    text-align: center;       /* Centra las líneas de texto dentro del bloque */
-    padding: 20px;
-}
-
-.inicio h1 { margin-bottom: 10px; }
-.inicio h5 { margin-bottom: 30px; } /* Espacio antes del botón */
-
-/* Botón personalizado de Bootstrap */
+/* --- BOTÓN PERSONALIZADO (Con espacio superior) --- */
 .btn-custom {
-    background-color: #51B4CD; /* Tu celeste identitario */
-    color: #FFFFFF !important;
+    background-color: #51B4CD;
+    color: #FFFFFF;
     padding: 12px 32px;
-    border-radius: 50px;       /* Redondeado total */
-    text-decoration: none;
+    border-radius: 50px;
     font-weight: 500;
-    border: none;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
     display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    
+    /* ESTA ES LA LÍNEA QUE DEBES AGREGAR */
+    margin-top: 20px; 
 }
 
 .btn-custom:hover {
-    background-color: #3e8da1; /* Un tono más oscuro al pasar el mouse */
+    background-color: #3e8da1;
+    color: #FFFFFF;
 }
 
-
-
-/* Este es el bloque que da el color negro de borde a borde */
-.sobre-mi-container {
-    background-color: #0B090B; 
-    width: 100%; /* Asegura que ocupe todo el ancho */
+/* --- 4. ESTRUCTURA (Fondo infinito + Texto alineado) --- */
+.sobre-mi-container, 
+.habilidades-container {
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centra el contenedor de texto internamente */
+    justify-content: center;
 }
 
-/* Este es el bloque que limita el texto y mantiene la alineación */
+.sobre-mi-container {
+    background-color: #0B090B; /* Negro de borde a borde */
+}
+
 .contenedor-interior {
     width: 100%;
-    max-width: 1440px; /* Tu ancho máximo de Figma */
-    padding: 120px 10%; /* Mantiene el aire lateral */
+    max-width: 1440px; 
+    padding: 120px 10%; /* Riel lateral */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea el texto a la izquierda */
+    align-items: flex-start; /* Todo a la izquierda */
 }
 
-.sobre-mi-container h6 {
-    max-width: 900px; /* Evita que las líneas de texto sean infinitas */
-    text-align: left;
+.titulo-seccion { margin-bottom: 40px; }
+
+/* --- 5. HERO --- */
+.inicio {
+    background-image: url("./assets/img/fondo.png"); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;
+    text-align: center;
 }
 
-
-
-
-.titulo-seccion {
-    margin-bottom: 40px;
-    color: #F6F5F4;
-    text-align: left;         /* <-- Forzamos el título a la izquierda */
+/* --- 6. GRID HABILIDADES --- */
+.habilidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
 }
 
-/* --- 5. SECCIÓN SOBRE MÍ (Ajustes finales) --- */
-.sobre-mi-container {
-    background-color: #0B090B; /* Fondo negro absoluto para separar */
+.card-habilidad {
+    flex: 1 1 calc(33.333% - 24px);
+    min-width: 300px;
+    border: 1px solid #51B4CD;
+    border-radius: 16px;
+    padding: 40px;
 }
 
-.texto-sobre-mi {
-    max-width: 900px;         /* Limita el ancho para una lectura profesional */
-    margin: 0;
-    text-align: left;         /* <-- Forzamos el párrafo a la izquierda */
-    color: #F6F5F4;
-    line-height: 1.6;         /* 160% legibilidad */
+.icon-container {
+    color: #51B4CD;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
+
+.card-habilidad ul { list-style: none; padding: 0; }
+.card-habilidad li { margin-bottom: 12px; position: relative; padding-left: 20px; }
+.card-habilidad li::before { content: "•"; color: #51B4CD; position: absolute; left: 0; }
