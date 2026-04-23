@@ -38,7 +38,7 @@
                             <a class="nav-link" href="#habilidades">Habilidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#proyectos">Proyectos destacados</a>
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
                         </li>
                     </ul>
                 </div>
@@ -119,31 +119,108 @@
             </div>
         </section>
 
-        <section class="proyectos-container" id="proyectos">
+        <section class="proyecto-destacado-container" id="proyectos">
             <div class="contenedor-interior">
-                <h2 class="titulo-seccion">Proyectos destacados</h2>
+                <h2 class="titulo-seccion">Proyectos</h2>
+
+                <div class="destacado-layout">
+                    <div class="destacado-imagen-box">
+                        <video class="destacado-imagen video-desktop" autoplay muted loop playsinline>
+                            <source src="./assets/img/a4.mkv" type="video/mp4">
+
+                        </video>
+
+                        <video class="destacado-imagen video-mobile" autoplay muted loop playsinline>
+                            <source src="./assets/img/a3.mkv" type="video/mp4">
+
+                        </video>
+                    </div>
+
+                    <div class="destacado-info">
+                        <div class="tags-proyecto">
+                            <span>UX Research</span>
+                            <span>Atomic Design</span>
+                            <span>UI Design</span>
+                        </div>
+
+                        <h3>Digix: Rediseño plataforma</h3>
+
+                        <p>
+                            <strong>El Desafío:</strong> Basados en la hipótesis de que la plataforma original
+                            limitaba la experiencia del usuario, diseñamos una solución EdTech desde cero.
+                            Escalamos desde wireframes hasta una interfaz completa, garantizando coherencia
+                            técnica y visual en cada interacción.
+                        </p>
+
+                        <p>
+                            <strong>La Solución:</strong> Utilicé Atomic Design para construir un sistema escalable y
+                            consistente. El foco estratégico fue optimizar la jerarquía visual, priorizando la
+                            visibilidad del botón de contacto (punto crítico detectado en investigación previa) para
+                            convertir una navegación fragmentada en un flujo de usuario intuitivo y eficiente.
+                        </p>
+
+                        <p>
+                            <strong>Resultados &amp; Aprendizaje:</strong> Tests de usabilidad en Maze confirmaron un
+                            100% de éxito en las tareas principales. El análisis de mapas de calor reveló fricciones en
+                            carruseles y login, que documenté como hoja de ruta para futuras iteraciones, reforzando que
+                            el diseño es un proceso evolutivo basado en evidencia.
+
+                        </p>
+
+                        <div class="destacado-columnas">
+                            <div>
+                                <p><strong>Habilidades:</strong></p>
+                                <ul class="lista-destacado">
+                                    <li>Liderazgo en ejecución</li>
+                                    <li>Rigurosidad técnica</li>
+                                    <li>Análisis de datos UX</li>
+                                    <li>Metodologías ágiles</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p><strong>Herramientas:</strong></p>
+                                <ul class="lista-destacado">
+                                    <li>Figma (Prototipado, UI, Slides)</li>
+                                    <li>Maze (Testing)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="https://drive.google.com/file/d/1p-gZt7eU3AqJVJanEOEUqtVVWdnqkhHt/view"
+                            class="btn-proyecto-destacado" target="_blank" rel="noopener noreferrer">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proyectos-container">
+            <div class="contenedor-interior">
+                <h2 class="titulo-seccion">Otros proyectos</h2>
 
                 <div class="proyectos-grid">
 
                     <article class="card-proyecto">
-                        <img src="./assets/img/pausa-img.jpg" alt="Proyecto Pausa Pasteur" class="imagen-proyecto">
+                        <img src="./assets/img/lider-app2.jpg" alt="UXplorer: Lider App" class="imagen-proyecto">
 
                         <div class="contenido-proyecto">
                             <div class="tags-proyecto">
-                                <span>Wayfinding</span>
-                                <span>Señalética</span>
+                                <span>UX Reserach</span>
+                                <span>Data Analysis</span>
                             </div>
 
-                            <h5>Pausa Pasteur</h5>
+                            <h5>UXplorer: Lider App</h5>
 
                             <p>
-                                Diseño e implementación de sistema de orientación (wayfinding) para centro comercial
-                                en Vitacura. Lideré el proceso completo: desde el análisis de flujos y diseño gráfico
-                                de piezas, hasta la documentación técnica, gestión de proveedores y supervisión de
-                                instalación en terreno.
+                                Proyecto grupal enfocado en la optimización UX de la App Lider. Mediante benchmarking,
+                                entrevistas y Journey Maps, diagnosticamos puntos críticos en el flujo de compra. Con
+                                base en estos hallazgos, propusimos mejoras estratégicas orientadas a simplificar la
+                                navegación y elevar la eficiencia del usuario.
                             </p>
 
-                            <a href="https://www.behance.net/gallery/234528035/Sistema-de-Wayfinding-Pausa-Pasteur-Strip-Center"
+                            <a href="https://drive.google.com/file/d/1R8iP2p5ssrbvsn8SrvrdEfoV-7VPxXZf/view"
                                 class="btn-proyecto" target="_blank" rel="noopener noreferrer">
                                 Ver detalles
                             </a>
@@ -151,24 +228,26 @@
                     </article>
 
                     <article class="card-proyecto">
-                        <img src="./assets/img/digix-img.jpg" alt="Proyecto Digix" class="imagen-proyecto">
+                        <img src="./assets/img/mockup-ia-3.jpg" alt="Proyecto Rediseño IA de Plataforma Educativa"
+                            class="imagen-proyecto">
 
                         <div class="contenido-proyecto">
                             <div class="tags-proyecto">
-                                <span>UX/UI</span>
-                                <span>Figma</span>
+                                <span>UX Research</span>
+                                <span>IA</span>
                             </div>
 
-                            <h5>Digix</h5>
+                            <h5>Rediseño IA de
+                                Plataforma Educativa</h5>
 
                             <p>
-                                Diseño integral de una app de cursos de arte y tecnología. El proceso incluyó
-                                evaluación heurística, arquitectura de información y testeo con usuarios. Desarrollé
-                                un prototipo interactivo de alta fidelidad y un sistema de diseño basado en Atomic
-                                Design, priorizando la usabilidad y la escalabilidad.
+                                Proyecto académico de Arquitectura de Información (IA). Rediseñamos la navegación
+                                jerárquica basándonos en benchmarking, card sorting y tree testing. A través de
+                                wireframes funcionales, logramos una estructura validada que maximiza la encontrabilidad
+                                y eficiencia del usuario final.
                             </p>
 
-                            <a href="https://drive.google.com/file/d/1p-gZt7eU3AqJVJanEOEUqtVVWdnqkhHt/view"
+                            <a href="https://drive.google.com/file/d/1kqwaHfl_6oOlTqyz6Z-BPJHIgV-4hHEz/view"
                                 class="btn-proyecto" target="_blank" rel="noopener noreferrer">
                                 Ver detalles
                             </a>
@@ -176,24 +255,24 @@
                     </article>
 
                     <article class="card-proyecto">
-                        <img src="./assets/img/bicipez-img.jpg" alt="Proyecto Bicipez" class="imagen-proyecto">
+                        <img src="./assets/img/ux4all2.jpg" alt="UX4ALL" class="imagen-proyecto">
 
                         <div class="contenido-proyecto">
                             <div class="tags-proyecto">
-                                <span>Modelado 3D</span>
-                                <span>Cubicación</span>
+                                <span>UX Research</span>
+                                <span>Accesibilidad</span>
                             </div>
 
-                            <h5>Bicipez</h5>
+                            <h5>UX4ALL</h5>
 
                             <p>
-                                Diseño y fabricación de una bicicleta de madera a escala real. El proyecto integró
-                                modelado 3D con procesos de ensamble manual en madera terciada. El resultado es un
-                                objeto funcional y resistente que equilibra una estética única con el rigor técnico
-                                del diseño industrial.
+                                Proyecto académico grupal para una plataforma educativa accesible. A través de
+                                investigación de usuario y User Journey Maps, definimos flujos y desarrollamos
+                                wireframes que resolvieron barreras de navegación, optimizando la jerarquía visual para
+                                crear una experiencia de aprendizaje inclusiva y escalable.
                             </p>
 
-                            <a href="https://www.behance.net/gallery/108708775/Pezmovil-Diseno-de-producto"
+                            <a href="https://drive.google.com/file/d/1mStlaUoILDYXd-e6vX98YL1dEv_ufMIJ/view"
                                 class="btn-proyecto" target="_blank" rel="noopener noreferrer">
                                 Ver detalles
                             </a>
